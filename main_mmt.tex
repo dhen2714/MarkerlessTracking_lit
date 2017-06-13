@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{standalone}
+\usepackage{import}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{caption}
+\captionsetup[figure]{labelfont=bf}
+\usepackage[backend=biber,doi=false,isbn=false,style=apa,url=false,hyperref=true]{biblatex}
+\DeclareLanguageMapping{british}{british-apa}
+\addbibresource{bibliography.bib}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+
+\makeatletter
+
+\newrobustcmd*{\parentexttrack}[1]{%
+	\begingroup
+	\blx@blxinit
+	\blx@setsfcodes
+	\blx@bibopenparen#1\blx@bibcloseparen
+	\endgroup}
+
+\AtEveryCite{%
+	\let\parentext=\parentexttrack%
+	\let\bibopenparen=\bibopenbracket%
+	\let\bibcloseparen=\bibclosebracket}
+
+\makeatother
+
+
+\title{Markerless Tracking of the Head}
+\author{David Henry}
+\date{June 2017}
+
+\begin{document}
+
+\maketitle
+In the previous chapter, the need for an MR-compatible markerless head motion tracking system was established. Besides forgoing the need for markers, MR-compatibility places further constraints on the desired system. The scope of this review encompasses current literature surrounding methods capable of quantifying head motion without the need for attachment of markers. Methodologies are grouped by their hardware requirements, and assessed in terms of their potential compatibility with current motion correction techniques in MRI of the head.
+
+
+\section{System Requirements} \label{Section1}
+\import{Sections/}{introduction}
+
+\section{Structured Light} \label{Section2}
+\import{Sections/}{structured_light}
+
+
+\printbibliography
+
+\end{document}

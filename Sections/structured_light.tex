@@ -1,0 +1,11 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\begin{document}
+Spatial information provided by a camera is inherently 2D, whereas 3D information is needed for motion tracking. Without affixing markers with known geometric properties, multiple cameras are needed for depth perception. Finding accurate and robust correspondences of points in these multiple camera views thus becomes a problem. Structured light techniques offer a solution to this issue by replacing a camera with a light source that projects some user-defined pattern onto the scene. Finding correspondences between views and hence 3D information thus becomes a matter of finding the intersection of a ray projected from a viewing camera centre with the projected light plane (Figure 1). Given a calibration between light source and detector, 3D surface coordinates can be found through triangulation, and a dense surface map of the object can be formed. For a review on structured light techniques, see [1].
+\par
+Algorithms associated with obtaining the 3D surface map are dependent on the type of surface illumination. These illumination techniques can be categorized as either being ‘single-shot’ or ‘multi-shot’. The latter requires the integration of multiple structured light patterns projected sequentially, while the former can produce a surface map from a single pattern projection. Intuitively, single-shot techniques appear better suited for motion tracking applications, as they provide better sampling rates. On the other hand, multi-shot techniques may offer more accurate and reliable measurements, given the sequential illuminations can be projected and captured in a short enough time for any motion that occurs in the FOV. 
+\subsection{Single shot}
+Single-shot structured light techniques make use of chromatic light or projected grid patterns such that full 3D information of a scene can be extracted from a single frame. The ‘Rainbow 3D Camera’ system developed in [2] projects a pattern with spatially varying wavelength, with simple triangulation being possible for each pixel given a known system baseline.
+
+	
+\end{document}
