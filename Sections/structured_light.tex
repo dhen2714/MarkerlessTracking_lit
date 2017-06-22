@@ -3,10 +3,10 @@
 \begin{document}
 Spatial information provided by a camera is inherently 2D, whereas 3D information is needed for motion tracking. Without affixing markers with known geometric properties, multiple cameras are needed for depth perception. Finding accurate and robust correspondences of points in these multiple camera views is therefore required. Structured light techniques offer a solution to the correspondence problem by replacing a camera with a light source that projects some user-defined pattern onto the scene. Finding correspondences between views and hence 3D information becomes a matter of finding the intersection of a ray projected from a viewing camera centre with the projected light plane (Figure \ref{struct_light}). Given a calibration between light source and detector, 3D surface coordinates can be found through triangulation, and a map of the object surface can be formed. For comprehensive reviews on structured light techniques, see \cite{Geng2011} and \cite{Salvi2010}.
 
-\begin{figure}[!b]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics*[scale=1.1]{structured_light_demo}
-	\caption{Triangulation using structured light. A light pattern is projected onto a scene, with variations in scene depth causing distortions in the pattern. The 3D coordinates of point P can be geometrically found, given the colour index and pixel position. Image taken from \parencite{Geng2011}.}\vspace*{-10pt}
+	\caption{Triangulation using structured light. A light pattern is projected onto a scene, with variations in scene depth causing distortions in the pattern. The 3D coordinates of point P can be geometrically found, given the colour index and pixel position. Image taken from \parencite{Geng2011}.}
 	\label{struct_light}
 \end{figure}
 
@@ -20,10 +20,10 @@ Periodic patterns can also be projected to obtain dense feature maps, with depth
 \par
 Examples of different structured light patterns are shown in Figure \ref{struct_patterns}. Other single-shot illumination strategies involve projecting coded stripes \parencite{Boyer1987,Forster2007,Zhang2002}, or 2D grid patterns \parencite{Petriu2000,Pages2006,Albitar2006}. Multi-shot techniques, capable of providing high resolution 3D information for large number of projections, can offer resistance against noise. Projecting successive binary patterns is the traditional multi-shot approach \parencite{Posdamer1982}, with the addition of colour encoding \parencite{Caspi1998} or PSI \parencite{Huang2006} helping to reduce the number of projected patterns.
 
-\begin{figure}[!t]
+\begin{figure}
 	\centering
 	\includegraphics*[scale=0.75]{struct_light_patterns}
-	\caption{Structured light patterns. a) Binary encoding - black and white stripe patterns are successively projected onto the scene, with the width of the stripes getting thinner with each projection. Each line along the horizontal axis thus has a unique code \parencite{Geng2011}. b) Grid encoding - three distinct characters are projected onto a grid such that each 3$\times$3 window is unique \parencite{Albitar2006}. c) Stripe encoding using a De Brujin sequence - the position of each coloured stripe is unique when considering the colours of its neighbours \parencite{Zhang2002}. }\vspace*{-10pt}
+	\caption{Structured light patterns. a) Binary encoding - black and white stripe patterns are successively projected onto the scene, with the width of the stripes getting thinner with each projection. Each line along the horizontal axis thus has a unique code \parencite{Geng2011}. b) Grid encoding - three distinct characters are projected onto a grid such that each 3$\times$3 window is unique \parencite{Albitar2006}. c) Stripe encoding using a De Brujin sequence - the position of each coloured stripe is unique when considering the colours of its neighbours \parencite{Zhang2002}. }
 	\label{struct_patterns}
 \end{figure}
 
