@@ -17,7 +17,11 @@ Multi-camera systems are capable of obtaining 3D information from a single frame
 \end{figure}
 
 \par 
-Similarly to monocular systems, markerless tracking with multi-camera systems begins with the extraction of features such as edges. Popular feature detection algorithms such as SIFT and SURF also include a framework for describing and matching features, such that correspondences can be found across temporally and geometrically varying views.
+Similarly to monocular systems, markerless tracking with multi-camera systems begins with the extraction of features such as edges. Popular feature detection algorithms such as SIFT \parencite{Lowe2004} and SURF \parencite{Bay2008} are able to localise keypoint features of various sizes by sampling `scale-space', which, for SIFT, involves the successive application of Gaussian kernels of varying width. SIFT and SURF  also include a framework for describing features, such that correspondences can be found across temporally and geometrically varying views. Once matched, these features or clusters of features can be fit to some model of the face, or triangulated and tracked individually.
+\par 
+Markerless systems that have been reported for human PET include \cite{Anishchenko2015,Gao2007} and \cite{Ma2008}. The former two studies used algorithms designed to detect specific facial features (such as eye corners or tip of the nose), whereas the latter used the more general approach of tracking SIFT features. \cite{Anishchenko2015} compared their system to magnetic sensors, with the average mismatch being 1.6 mm. Cameras were placed out of bore for all of these systems.
+\par
+
 
 \begin{itemize}
 	\item Outline of different markerless approaches used in medical imaging.
