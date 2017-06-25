@@ -12,7 +12,7 @@ Multi-camera systems are capable of obtaining 3D information from a single frame
 \begin{figure}
 	\centering
 	\includegraphics*[scale=0.75]{triangulation}
-	\caption{Stereo triangulation. Given pixel coordinates y and y` of the same scene point, the 3D position Q of the point can be found through triangulation.}
+	\caption{Stereo triangulation. Given pixel coordinates y and y$'$ of the same scene point, the 3D position Q of the point can be found through triangulation.}
 	\label{triangulation}
 \end{figure}
 
@@ -21,6 +21,14 @@ Similarly to monocular systems, markerless tracking with multi-camera systems be
 \par 
 Markerless systems that have been reported for human PET include \cite{Anishchenko2015,Gao2007} and \cite{Ma2008}. The former two studies used algorithms designed to detect specific facial features (such as eye corners or tip of the nose), whereas the latter used the more general approach of tracking SIFT features. \cite{Anishchenko2015} compared their system to magnetic sensors, with the average mismatch being 1.6 mm. Cameras were placed out of bore for all of these systems.
 \par
+For small-animal PET, Kyme et al. \parencite*{Kyme2014} used a four-camera setup to track SIFT features. The 3D location and descriptor for each triangulated landmark was stored in a database such that detected SIFT keypoints in later frames could be used to calculate the pose of the head, in an approach similar to ones used in simultaneous localisation and mapping (SLAM) in mobile robotics \parencite{Se2002,Se2005}. Sub-millimetre accuracy was reported for the tracking of a taxidermy rat head. For a live rat, it was found that many of the detected features lay on parts of the head that moved non-rigidly, adversely affecting motion estimates. To amplify the number of features in rigidly moving parts of the head, the authors proposed the use of additional ink-based facial markings. While this approach may not be strictly markerless, the ink-based features move with the surface being imaged, thus potentially providing a way of detecting or measuring non-rigid motion which would not be possible with a traditional, single marker based approach.
+
+\begin{figure}
+	\centering
+	\includegraphics*[scale=0.63]{rathead}
+	\caption{SIFT features detection for a rat head. a) SIFT features (red boxes) detected on a taxidermal rat head matched (white lines) to a different view. b) SIFT features detected on a live rat. In order to amplify number of features detected, ink markings were added to the rat head. Left picture without markings, right with markings. Images taken from \parencite{Kyme2014}.}
+	\label{rathead}
+\end{figure}
 
 
 \end{document}
