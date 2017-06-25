@@ -12,7 +12,7 @@ Multi-camera systems are capable of obtaining 3D information from a single frame
 \begin{figure}
 	\centering
 	\includegraphics*[scale=0.75]{triangulation}
-	\caption{Stereo triangulation. Given pixel coordinates y and y$'$ of the same scene point, the 3D position Q of the point can be found through triangulation.}
+	\caption{Stereo triangulation. Given pixel coordinates y and y$'$ of the same scene point, the 3D position Q of that point can be found through triangulation. Points O and O$'$ are camera centres of left and right cameras respectively.}
 	\label{triangulation}
 \end{figure}
 
@@ -33,6 +33,6 @@ For small-animal PET, Kyme et al. \parencite*{Kyme2014} used a four-camera setup
 \par 
 Preliminary testing of method used by Kyme et al. \parencite*{Kyme2014} on humans has been reported \parencite{Kyme2016,Kyme2013}. In \cite{Kyme2016}, tracking of the head was done in the bore of an MRI scanner, without markers and with the application of an ink-based stamp on the forehead. The accuracy of these methods is highly dependent on the ability to extract enough SIFT features on non-rigidly moving parts of the head. The ability to place cameras inside the head coil may be beneficial for this reason, as close-up shots of the face would provide more detail for feature extraction.
 \par 
-In order to be adapted for MRI, optical systems still require some refinement. With monocular systems being ruled out due to their lack of accuracy, stereo or multi-camera approaches are left as an option. The methodology presented by Kyme et al. \parencite*{Kyme2014} for small-animal imaging appears readily adaptable for use with humans \parencite{Kyme2016,Kyme2013}. Although sub-millimetre accuracy was reported for the tracking of a taxidermal rat head, it is unclear if this level of accuracy is possible for the tracking of a human head.
+In order to be adapted for MRI, optical systems require refinement. With monocular systems being ruled out due to their lack of accuracy, stereo or multi-camera approaches are left as an option. The methodology presented by Kyme et al. \parencite*{Kyme2014} for small-animal imaging appears readily adaptable for use with humans \parencite{Kyme2016,Kyme2013}. Although sub-millimetre accuracy was reported for the tracking of a taxidermal rat head, it is unclear if this level of accuracy is possible for the tracking of a human head. If high level of accuracy can be achieved, stereo or multi-camera systems are a promising approach for markerless motion tracking of the head, offering high frequency pose estimates. For retrospective correction, this is only limited by the camera frame rate, whereas for prospective correction, speed at which pose can be estimated for each frame is the limiting factor.
 
 \end{document}
