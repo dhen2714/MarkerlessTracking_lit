@@ -1,6 +1,20 @@
 \documentclass[class=article, crop=false]{standalone}
 
 \begin{document}
+A motion tracking system encompasses the hardware and associated data processing algorithms required to quantitatively characterise motion of the head. Modelling the head as a rigid body requires 6 degree of freedom (DoF) characterisation. Motion tracking systems reviewed here will be markerless, and capable of rigid body tracking. Other requirements are outlined below.
+
+\subsection{Accuracy and Precision}
+Following the descriptions given in \parencite{Maclaren2013}, accuracy refers to the discrepancy between a measured value and its `true' value, and precision refers to the level of aberrant jitter in the measured data. Both the accuracy and the precision of the motion tracking system should be better than the resolution of the MR image for motion correction to be of any benefit.
+
+\subsection{MRI Compatibility}
+MRI compatibility places further, quite stringent requirements on the desired markerless motion tracking system. The system should be able to function in a high magnetic field environment, as well as not affecting $\textbf{B}_0$ and $\textbf{B}_1$ homogeneity. For tracking of the head, the presence of the MR head coil is quit problematic, as large portions of the head will be occluded to any system placed outside the bore of the scanner. Even within bore, occlusion may be a problem, especially as the number of coils in the apparatus increases for faster imaging. For this reason, the tracking system should ideally be compact, such that it can fit within the bore of the scanner, or better yet, inside the head coil.
+
+\subsection{Sampling Rate and Latency}
+
+\subsection{Safety and Comfort}
+
+\subsection{Cost and Complexity}
+
 
 
 \end{document}

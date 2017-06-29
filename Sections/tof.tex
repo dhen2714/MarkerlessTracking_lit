@@ -1,7 +1,7 @@
 \documentclass[class=article, crop=false]{standalone}
 
 \begin{document}
-Time of flight (ToF) systems are similar to structured light systems in their use of a projected light source and a detector to create surface maps. Unlike structured light systems however, ToF systems use amplitude or phase changes of projected light in the time domain to extract depth information, rather than in the spatial domain. Reviews on ToF systems include \cite{Horaud2016}, \cite{tofbook} and \cite{Kolb2010}. While stereo-vision and structured light systems must have its components separated by some baseline to get accurate depth information, ToF systems are not limited in this way and can therefore be fit into highly compact forms. For this reason, there is great interest in ToF for mobile applications.
+Time of flight (ToF) systems are similar to structured light systems in their use of a projected light source and a detector to create surface maps. Unlike structured light systems however, ToF systems use amplitude or phase changes of projected light in the time domain to extract depth information, rather than in the spatial domain. Reviews on ToF systems include \parencite{Horaud2016}, \parencite{tofbook} and \parencite{Kolb2010}. While stereo-vision and structured light systems must have its components separated by some baseline to get accurate depth information, ToF systems are not limited in this way and can therefore be fit into highly compact forms. For this reason, there is great interest in ToF for mobile applications.
 \par 
 There are two types of ToF systems; systems with pulsed-light sensors and those with continuous-wave (CW) sensors. Pulsed-light systems consist of a pulse emitter and receiver which measures the round-trip time of an emitted pulse. The emitter usually consists of an IR laser firing onto a rotating mirror or optical diffuser. Due to the high power nature of the light pulses, these systems are suited for outdoor measurements.
 \par 
@@ -15,9 +15,9 @@ CW systems measure the phase difference between the emitted sinusoidal light wav
 \end{figure}
 
 \par 
-The Microsoft Kinect v2 is a commercially available CW-ToF system which was released in 2014. Noonan et al. \parencite*{Noonan2015} reported $\leq$ 0.5 mm spatial accuracy at 30 Hz using the Kinect v2 in motion tracking of a head phantom in a PET/CT scanner. Motion tracking of a human head was also validated. This was similar to the accuracy reported using the structured-light based Kinect v1 \parencite{Noonan2012}. The advantage of the Kinect v2 was that it had better depth resolution, could handle non-rigid motion better, and was modified to operate at distances of 0.1-0.5 m so that it could be placed within the PET/CT bore, whereas the Kinect v1 had a minimum operating distance of 0.5 m and was placed just outside the bore. 
+The Microsoft Kinect v2 is a commercially available CW-ToF system which was released in 2014. Noonan et al. \parencite*{Noonan2015} reported $\leq$ 0.5 mm spatial accuracy at 30 Hz using the Kinect v2 in motion tracking of a head phantom in a PET/CT scanner. Motion tracking of a human head was also validated. This was similar to the accuracy reported using the structured-light based Kinect v1 \parencite{Noonan2012}. The advantage of the Kinect v2 was that it had better depth resolution, could handle non-rigid motion better, and was modified to operate at distances of 0.1-0.5 m so that it could be placed within the PET/CT bore (Figure \ref{kinect}b), whereas the Kinect v1 had a minimum operating distance of 0.5 m and was placed just outside the bore (Figure \ref{kinect}a). 
 \par 
-While both the accuracy and latency of pose estimates provided Kinect v2 are excellent for real-time tracking of the head, its ability to work in a high magnetic-field environment is questionable. Even if this were to be demonstrated, the size of the system prevents in bore-use, and the head coil would prevent the Kinect from seeing much of the head.
+While both the accuracy and latency of pose estimates provided Kinect v2 are excellent for real-time tracking of the head, its ability to work in a high magnetic-field environment is questionable. Even if this were to be demonstrated, the size of the system prevents in-bore use for MRI, and the coil would prevent the Kinect from seeing much of the head.
 
 \begin{figure}[!h]
 	\centering
@@ -28,6 +28,5 @@ While both the accuracy and latency of pose estimates provided Kinect v2 are exc
 
 \par 
 More compact, commercially available ToF systems include the pico flexx and pico maxx from PMD, and the DS541A module from SoftKinetic. These systems are pulsed-light systems which use eye-safe IR light, with minimum operating ranges of 10 cm, $\sim$mm accuracy and framerates of up to 60 fps. Systems reviewed in \parencite{Horaud2016} had minimum operating ranges of greater than 50 cm.
-
 
 \end{document}
